@@ -42,3 +42,12 @@ resource "azurerm_dns_a_record" "testserver5" {
   ttl                 = 300
   records             = ["10.1.1.104"]
 }
+
+resource "azurerm_dns_a_record" "testserver6" {
+  name                = "testserver6"
+  zone_name           = azurerm_dns_zone.devopssravancom.name
+  resource_group_name = azurerm_resource_group.devops-practice1.name
+  ttl                 = 300
+  records             = ["10.1.1.105"]
+}
+
